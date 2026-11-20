@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ОКР: что это такое, как работает цикл и почему ритуалы не помогают надолго</title>
+<meta name="description" content="Понятное объяснение обсессивно-компульсивного расстройства: навязчивые мысли, ритуалы, цикл ОКР. Пример из фильма «Авиатор», разбор «факт или мнение», психообразование без самолечения.">
+<meta name="keywords" content="ОКР, обсессивно-компульсивное расстройство, навязчивые мысли, ритуалы, компульсии, обсессии, Авиатор, психообразование">
+<link rel="canonical" href="https://example.com/okr">
+
+<!-- Open Graph для соцсетей -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="ОКР: как работает цикл навязчивых мыслей">
+<meta property="og:description" content="Спокойное объяснение ОКР: мысли, ритуалы, почему облегчение временное. Пример из «Авиатора» и интерактив «факт или мнение».">
+<meta property="og:locale" content="ru_RU">
+
+<!-- Структурированные данные: статья + FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "ОКР: что это такое и как работает цикл",
+      "description": "Информационный разбор обсессивно-компульсивного расстройства без медицинских рекомендаций.",
+      "inLanguage": "ru",
+      "author": {"@type": "Organization", "name": "Понимание ОКР"},
+      "dateModified": "2023-11-20",
+      "mainEntityOfPage": "https://example.com/okr"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Что такое ОКР простыми словами?",
+          "acceptedAnswer": {"@type": "Answer", "text": "ОКР — это расстройство, при котором навязчивые мысли (обсессии) вызывают тревогу, а ритуалы (компульсии) временно её снижают, но подкрепляют цикл."}
+        },
+        {
+          "@type": "Question",
+          "name": "Почему ритуалы не помогают надолго?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Ритуал даёт краткое облегчение, из-за чего мозг запоминает его как «спасение». В следующий раз тревога приходит быстрее, и цикл усиливается."}
+        },
+        {
+          "@type": "Question",
+          "name": "Мысль — это факт?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Нет. Мысль — событие в голове, а не событие в мире. Навязчивая мысль не делает плохое реальным."}
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    /* Тёплая, «затягивающая» палитра */
+    --bg: #fbf7f0;
+    --bg-2: #f4ecdf;
+    --card: #fffdf8;
+    --text: #2f2a26;
+    --muted: #6f655c;
+    --accent: #4f7a63;          /* глубокий шалфей */
+    --accent-dark: #365944;
+    --accent-soft: #e3efe6;
+    --amber: #d99a4e;           /* янтарный акцент */
+    --amber-soft: #f8e8cf;
+    --terracotta: #c17a5a;
+    --terracotta-soft: #f6e3d8;
+    --border: #e8ddcf;
+    --shadow: 0 10px 30px rgba(70, 55, 40, 0.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background:
+      radial-gradient(1200px 600px at 10% -10%, #fdf1e0 0%, transparent 60%),
+      radial-gradient(900px 500px at 110% 0%, #e6f0e8 0%, transparent 55%),
+      var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  header{
+    padding: 72px 20px 56px;
+    text-align: center;
+    background: linear-gradient(160deg, #f7ead9 0%, #eaf1e9 100%);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  header::after{
+    content:"";
+    position:absolute; left:50%; bottom:-60px; transform:translateX(-50%);
+    width:520px; height:220px;
+    background: radial-gradient(closest-side, rgba(217,154,78,.18), transparent);
+    pointer-events:none;
+  }
+  header h1{
+    margin: 0 0 14px;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 400;
+    color: var(--accent-dark);
+    letter-spacing: -0.02em;
+    line-height:1.2;
+  }
+  header p{
+    margin: 0 auto;
+    max-width: 620px;
+    color: var(--muted);
+    font-size: 18px;
+    font-style: italic;
+  }
+  .wrap{max-width: 780px; margin: 0 auto; padding: 0 20px}
+  
+  /* Обновленный дисклеймер */
+  .disclaimer{
+    background: #fff6ea;
+    border-left: 4px solid var(--amber);
+    color: #7a5a2e;
+    padding: 18px 22px;
+    border-radius: 0 14px 14px 0;
+    margin: 32px 0;
+    font-size: 15px;
+    font-family: system-ui, sans-serif;
+    box-shadow: 0 4px 16px rgba(217,154,78,.08);
+  }
+  .disclaimer strong{ color: #6a4a1e; }
+
+  section{margin: 56px 0; opacity:0; transform: translateY(18px);
+    transition: opacity .7s ease, transform .7s ease}
+  section.visible{opacity:1; transform:none}
+  h2{
+    font-size: 26px;
+    font-weight: 400;
+    margin: 0 0 16px;
+    color: var(--accent-dark);
+    letter-spacing:-0.01em;
+  }
+  h2::after{
+    content:""; display:block; width:56px; height:3px; margin-top:10px;
+    background: linear-gradient(90deg, var(--amber), transparent);
+    border-radius:3px;
+  }
+  h3{font-size: 18px; font-weight: 600; margin: 24px 0 10px; color: var(--text)}
+  p{margin: 0 0 16px}
+  .lead{font-size: 19px; color: var(--muted)}
+  .card{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+  }
+  .pill{
+    display: inline-block;
+    background: var(--amber-soft);
+    color: #8a5a1e;
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: system-ui, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+  }
+  .cycle-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 16px;
+  }
+  @media(max-width: 640px){ .cycle-grid{grid-template-columns: 1fr} }
+  .col h4{
+    margin: 0 0 10px;
+    font-size: 13px;
+    font-family: system-ui, sans-serif;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+  }
+  .chip{
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: var(--accent-soft);
+    border: 1px solid transparent;
+    border-radius: 14px;
+    padding: 13px 16px;
+    margin-bottom: 9px;
+    font-family: system-ui, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    color: var(--text);
+    transition: transform .15s ease, background .15s, border-color .15s, box-shadow .15s;
+  }
+  .chip:hover{
+    border-color: var(--accent);
+    background: #f0f7f1;
+    transform: translateY(-1px);
+  }
+  .chip.selected{
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent-dark);
+    box-shadow: 0 6px 16px rgba(79,122,99,.25);
+  }
+  .hint-text{
+    font-size: 14px;
+    color: var(--terracotta);
+    margin-top: 10px;
+    font-family: system-ui, sans-serif;
+    display: none;
+  }
+  .hint-text.show{display:block}
+  .cycle-result{
+    margin-top: 20px;
+    background: linear-gradient(135deg, #fdf1e6, #eef5ee);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    font-family: system-ui, sans-serif;
+    font-size: 15px;
+  }
+  .cycle-result ol{margin: 10px 0 14px; padding-left: 22px}
+  .cycle-result b{color: var(--terracotta)}
+  .hidden{display:none !important}
+  .quiz-q{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 12px;
+    font-family: system-ui, sans-serif;
+    box-shadow: 0 4px 14px rgba(70,55,40,.04);
+  }
+  .quiz-q p{font-weight: 600; margin: 0 0 12px; font-size: 15px}
+  .quiz-btns{display: flex; gap: 8px; flex-wrap: wrap}
+  .quiz-btns button{
+    flex: 1;
+    min-width: 120px;
+    padding: 11px 14px;
+    border-radius: 11px;
+    border: 1px solid var(--border);
+    background: #fdfaf4;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--text);
+    transition: .15s;
+  }
+  .quiz-btns button:hover{border-color: var(--accent); background:#f2f8f3}
+  .quiz-btns button.correct{background: var(--accent); color:#fff; border-color: var(--accent-dark)}
+  .quiz-btns button.wrong{background: var(--terracotta-soft); border-color: var(--terracotta); color:#7a3f28}
+  .feedback{font-size: 14px; margin-top: 12px; color: var(--muted); line-height: 1.6}
+  .score{margin-top: 14px; font-family: system-ui, sans-serif; font-weight: 600; color: var(--accent-dark); font-size: 14px}
+  
+  /* Обновленный подвал */
+  footer{
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    padding: 44px 20px;
+    border-top: 1px solid var(--border);
+    margin-top: 56px;
+    font-family: system-ui, sans-serif;
+    background: linear-gradient(180deg, transparent, #f6efe4);
+  }
+  footer a { color: var(--accent-dark); text-decoration: none; border-bottom: 1px dotted var(--accent); }
+  footer a:hover { color: var(--amber); border-bottom-color: var(--amber); }
+  .footer-meta { margin-top: 16px; font-size: 13px; opacity: 0.8; }
+
+  .film-note{
+    background: linear-gradient(135deg, #fdf1e3, #eef5ee);
+    border-radius: 18px;
+    padding: 26px;
+    margin: 20px 0;
+    font-family: system-ui, sans-serif;
+    font-size: 15px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+  .film-note b{color: var(--terracotta)}
+  .techniques{display: grid; gap: 12px; margin-top: 16px}
+  .technique{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 14px;
+    padding: 18px;
+    font-family: system-ui, sans-serif;
+    font-size: 15px;
+    transition: transform .15s ease, box-shadow .15s;
+  }
+  .technique:hover{transform: translateY(-2px); box-shadow: var(--shadow)}
+  .technique b{color: var(--accent-dark)}
+  @media (prefers-reduced-motion: reduce){
+    section{opacity:1; transform:none; transition:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Понимание ОКР</h1>
+  <p>Спокойное объяснение того, как работает цикл навязчивых мыслей, и почему ритуалы дают лишь временное облегчение</p>
+</header>
+
+<main class="wrap">
+
+  <!-- Улучшенный дисклеймер -->
+  <div class="disclaimer" role="note" aria-label="Важное уведомление">
+    <strong>Важно:</strong> этот сайт не является медицинской организацией и не оказывает медицинских услуг.
+    Здесь нет диагностики, лечения и медицинских рекомендаций. Вся информация носит исключительно
+    образовательный характер. Если состояние мешает жить, обратитесь к психотерапевту или психиатру.
+  </div>
+
+  <section>
+    <h2>Что такое ОКР</h2>
+    <p class="lead">ОКР — обсессивно-компульсивное расстройство. Его ядро не «привычка» и не «слабохарактерность», а повторяющийся цикл.</p>
+    <p><b>Обсессии</b> — навязчивые мысли, образы или импульсы, которые приходят против воли и вызывают тревогу. Например: «а вдруг я оставил плиту включённой», «а вдруг я чем-то заразился».</p>
+    <p><b>Компульсии</b> — действия или ритуалы, которые человек выполняет, чтобы снизить тревогу: проверки, мытьё рук, пересчитывание, мысленное «отмаливание».</p>
+    <p>Важно: <b>мысли сами по себе не опасны</b>. Проблема не в том, что они появляются, а в том, как человек на них реагирует.</p>
+  </section>
+
+  <section class="card">
+    <span class="pill">Интерактив 1</span>
+    <h2>Собери цикл ОКР</h2>
+    <p>Выберите по одному пункту в каждой колонке. Пары связаны по смыслу: каждая мысль подходит к своему ритуалу.</p>
+
+    <div class="cycle-grid">
+      <div class="col">
+        <h4>Навязчивая мысль</h4>
+        <div id="obsList"></div>
+      </div>
+      <div class="col">
+        <h4>Ритуал</h4>
+        <div id="compList"></div>
+      </div>
+    </div>
+
+    <p id="cycleHint" class="hint-text">Эта пара не подходит друг к другу. Попробуйте выбрать связанные по смыслу пункты.</p>
+
+    <div id="cycleResult" class="cycle-result hidden"></div>
+  </section>
+
+  <section>
+    <h2>Пример из фильма «Авиатор»</h2>
+    <div class="film-note">
+      <p>В фильме Мартина Скорсезе <b>«Авиатор» (2004)</b> Леонардо ДиКаприо играет Говарда Хьюза, чьё ОКР проявляется через страх загрязнения и многократное мытьё рук.</p>
+      <p>Одна из самых показательных сцен: Хьюз моет руки с такой яростью, что раздирает кожу до крови. А затем не может взяться за дверную ручку и стоит, парализованный, пока кто-нибудь не войдёт и не выпустит его.</p>
+      <p><b>В чём здесь суть:</b> ритуал (мытьё) должен был снизить тревогу, но вместо этого создал новую проблему — раны, которые сами стали «загрязнением». Цикл замкнулся: то, что должно было защитить, стало угрозой.</p>
+      <p style="margin-bottom:0">Это не выдумка сценаристов: ДиКаприо консультировался с психиатром, готовясь к роли, а фильм основан на реальной биографии Хьюза.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Почему ритуалы не помогают надолго</h2>
+    <p>Ритуал действительно снижает тревогу, но <b>ненадолго</b>. Мозг запоминает: «я проверил или помыл, и беды не случилось», и в следующий раз тревога приходит быстрее и сильнее, а уверенность в необходимости ритуала растёт.</p>
+    <p>Получается петля: <b>тревога → ритуал → краткое облегчение → усиление тревоги</b>. Выход из неё не «перестать думать», а постепенно учиться <b>не выполнять ритуал</b>, позволяя тревоге снизиться самой. Это делают в психотерапии, и лучше со специалистом.</p>
+  </section>
+
+  <section class="card">
+    <span class="pill">Интерактив 2</span>
+    <h2>Факт или мнение?</h2>
+    <p>Прочитайте утверждение и выберите. После ответа появится пояснение.</p>
+    <div id="quiz"></div>
+    <div class="score" id="score"></div>
+  </section>
+
+  <section>
+    <h2>Что может помочь (понимание, а не самолечение)</h2>
+    <p>Ниже не инструкции по «избавлению», а <b>опоры для понимания</b>. Они помогают заметить механизм, но не заменяют терапию.</p>
+    <div class="techniques">
+      <div class="technique"><b>Мысль не факт.</b> Навязчивая мысль — это событие в голове, а не событие в мире. Она не делает плохое реальным и не является приказом.</div>
+      <div class="technique"><b>Ритуал даёт облегчение на минуты.</b> Если после ритуала тревога возвращается быстрее, это не провал, а подтверждение того, как работает цикл.</div>
+      <div class="technique"><b>Тревога имеет пик и спад.</b> Она не растёт бесконечно. Если не «кормить» её ритуалом, она проходит сама.</div>
+      <div class="technique"><b>Поиск заверений тоже ритуал.</b> Когда вы снова и снова спрашиваете близких или гуглите «точно ли всё в порядке», облегчение тоже временное.</div>
+      <div class="technique"><b>Психотерапия работает.</b> При ОКР хорошо изучены КПТ и экспозиция с предотвращением реакции (ЭРП). Это работа со специалистом.</div>
+    </div>
+    <p style="margin-top: 20px;">Этот сайт не заменяет консультацию. Он помогает <b>понять</b>, что происходит, и с этим пониманием проще сделать следующий шаг.</p>
+  </section>
+
+  <footer>
+    <p>Информационный проект. Не является медицинской рекомендацией.</p>
+    <div class="footer-meta">
+      Связаться с автором: <a href="mailto:hello@example.com">hello@example.com</a> (заглушка)<br>
+      Последнее обновление: 20 ноября 2023 г.
+    </div>
+  </footer>
+</main>
+
+<script>
+  const $ = id => document.getElementById(id);
+
+  /* Плавное появление секций */
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, {threshold: 0.12});
+  document.querySelectorAll('section').forEach(s => io.observe(s));
+
+  /* Интерактив 1 */
+  const CYCLES = [
+    { obs: '«А вдруг плита осталась включённой?»', comp: 'Проверить плиту несколько раз' },
+    { obs: '«А вдруг я подхватил инфекцию?»', comp: 'Вымыть руки несколько раз' },
+    { obs: '«А вдруг я причиню кому-то вред?»', comp: 'Мысленно «отменить» мысль или извиниться' },
+    { obs: '«А вдруг я сделал что-то не так?»', comp: 'Переспросить у близкого, всё ли в порядке' }
+  ];
+
+  let chosenObsIdx = null, chosenCompIdx = null;
+
+  function resetSelections(){
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
+    $('cycleResult').classList.add('hidden');
+    $('cycleHint').classList.remove('show');
+    chosenObsIdx = null; chosenCompIdx = null;
+  }
+  function checkLogic(){
+    if (chosenObsIdx === null || chosenCompIdx === null) return;
+    if (chosenObsIdx === chosenCompIdx){
+      $('cycleHint').classList.remove('show');
+      renderCycle();
+    } else {
+      $('cycleHint').classList.add('show');
+      resetSelections();
+    }
+  }
+  const obsBox = $('obsList'), compBox = $('compList');
+  CYCLES.forEach((c, i) => {
+    const ob = document.createElement('button');
+    ob.className = 'chip'; ob.type = 'button'; ob.textContent = c.obs;
+    ob.onclick = () => {
+      document.querySelectorAll('#obsList .chip').forEach(x => x.classList.remove('selected'));
+      ob.classList.add('selected'); chosenObsIdx = i; checkLogic();
+    };
+    obsBox.appendChild(ob);
+
+    const cb = document.createElement('button');
+    cb.className = 'chip'; cb.type = 'button'; cb.textContent = c.comp;
+    cb.onclick = () => {
+      document.querySelectorAll('#compList .chip').forEach(x => x.classList.remove('selected'));
+      cb.classList.add('selected'); chosenCompIdx = i; checkLogic();
+    };
+    compBox.appendChild(cb);
+  });
+  function renderCycle(){
+    const res = $('cycleResult'); res.classList.remove('hidden');
+    const c = CYCLES[chosenObsIdx];
+    res.innerHTML = `
+      <h3 style="margin-top:0; font-family: Georgia, serif; color: var(--terracotta);">Ваш цикл</h3>
+      <ol>
+        <li><b>Мысль:</b> ${c.obs}</li>
+        <li><b>Тревога:</b> «если не сделать, случится беда»</li>
+        <li><b>Ритуал:</b> ${c.comp}</li>
+        <li><b>Краткое облегчение:</b> тревога спадает на минуты</li>
+        <li><b>Усиление:</b> мозг запоминает, что ритуал «спас»</li>
+      </ol>
+      <p style="margin-bottom:0;">Мысль сама по себе не опасна, а ритуал не решает проблему: он лишь на время снижает тревогу и подкрепляет цикл.</p>
+    `;
+  }
+
+  /* Интерактив 2 */
+  const QUIZ = [
+    {q:'«Мысль это факт»', a:'opinion', f:'Мысль это событие в голове, а не то, что происходит в мире. Навязчивая мысль не делает событие реальным.'},
+    {q:'«Если я подумал о плохом, это может случиться»', a:'opinion', f:'Мысли не обладают силой вызывать события. Это убеждение часто встречается при ОКР, но оно не соответствует действительности.'},
+    {q:'«Мысли могут быть неприятными и пугающими»', a:'fact', f:'Да, это факт: у людей бывают пугающие мысли. Это нормально и само по себе не говорит о проблеме.'},
+    {q:'«Ритуал снижает тревогу на время»', a:'fact', f:'Да, это так, и именно поэтому цикл повторяется: краткое облегчение подкрепляет ритуал.'},
+    {q:'«Хороший человек не должен иметь плохих мыслей»', a:'opinion', f:'Это мнение. Наличие мыслей не определяет человека.'},
+    {q:'«Тревога может снизиться сама, если не выполнять ритуал»', a:'fact', f:'Да, это факт: тревога имеет пик и затем спадает. Удержание от ритуала позволяет этому произойти.'}
+  ];
+  let answered = 0, correct = 0;
+  const quizBox = $('quiz');
+  QUIZ.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'quiz-q';
+    div.innerHTML = `<p>${i+1}. ${item.q}</p>
+      <div class="quiz-btns">
+        <button data-v="fact">Факт</button>
+        <button data-v="opinion">Мнение</button>
+      </div>
+      <div class="feedback"></div>`;
+    const btns = div.querySelectorAll('button');
+    const fb = div.querySelector('.feedback');
+    btns.forEach(b => {
+      b.onclick = () => {
+        if (div.dataset.answered) return;
+        div.dataset.answered = '1';
+        if (b.dataset.v === item.a){ b.classList.add('correct'); correct++; }
+        else {
+          b.classList.add('wrong');
+          btns.forEach(x => { if (x.dataset.v === item.a) x.classList.add('correct'); });
+        }
+        fb.textContent = item.f;
+        answered++;
+        if (answered === QUIZ.length){
+          $('score').textContent = `Верно: ${correct} из ${QUIZ.length}. Главное не счёт, а понимание разницы.`;
+        }
+      };
+    });
+    quizBox.appendChild(div);
+  });
+</script>
+</body>
+</html>
